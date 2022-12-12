@@ -4,7 +4,7 @@ npx create-react-app type_app --typescript
 제작 완료된 마켓컬리 회원가입폼 포트폴리오에 typescript 적용하기
 npm i typescript @types/node @types/react @types/react-dom
 
-깃허브 배포
+깃허브 배포 준비 깃설정, 환경설정, 스테이징, 커밋, 푸쉬하기
 git init
 
 ls -la
@@ -18,3 +18,83 @@ git remote -v
 git add .
 git commit -m "마켓컬리 회원가입 CRA 타입스크립트 사용"
 git push origin master
+
+깃허브 
+하단 deployment 선택 클릭
+배포사이트 이동
+
+github pages 로 이동
+
+1. step1 : Add homepage to package.json
+포트폴리오 프로젝트
+package.json 에디터에서 연다
+2. Step 2: Install gh-pages and add deploy to scripts in package.json
+3.    "scripts": { 스크립트 안에 2개 추가
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build",
+  },
+
+4. Deploy the site by running npm run deploy
+npm run deploy
+
+5. 배포끝 
+깃허브 배포 위치에서 1~3분 기다리기
+
+6. 웹 브라우저 띄우기
+
+{
+  "name": "gaib",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/node": "^18.11.12",
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.9",
+    "gh-pages": "^4.0.0",
+    "prop-type": "^0.0.1",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "typescript": "^4.9.4",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ],
+    "homepage": "https://star2dawn.github.io/kurly_cra_typescript/"
+  }
+}
+
+
+
+셋팅 setting 메뉴 => 깃허브 페이지 pages 메뉴 => 마스터 master => 저장 save
+=> 1분 후 새로고침 => 배포주소 나타남
+
+https://star2dawn.github.io/kurly_cra_typescript/
+
