@@ -16,3 +16,5 @@ git config user.email
 git remote add origin https://github.com/star2dawn/kurly_cra_typescript.git
 git remote -v
 git add .
+git commit -m "마켓컬리 회원가입 CRA 타입스크립트 사용"
+git push origin master
